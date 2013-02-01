@@ -1,0 +1,61 @@
+/*	RESET */
+
+body { font-size: 11px; }
+img, iframe, iframe.alignc, embed, object, video, .wp-caption { max-width: 100%; height: auto; } 
+
+
+
+/*	TYPOGRAPHY */
+
+h1 { font-size: 2.0em; } 
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.4em; } 
+
+
+
+/*	STRUCTURE */
+
+#page-wrap { width: 320px; margin: 20px auto -110px; }
+#main-col { width: 290px; float: none; margin: 0 auto; }
+#main-col-nosidebar { width: 290px; float: none; margin: 0 auto; }
+#sidebar { width: 290px; margin: 20px auto 0 auto; padding: 20px 0 0 0; border-top: 1px dotted #a9a9a9; float: none; }
+#push { height: 110px; }
+
+
+
+/*	HEADER */
+
+h1#logo { font-size: 2.6em; }
+#top-bar { width: 320px; }
+#top-bar-1 { width: 290px; float: none; margin: 0 auto; }
+#top-bar-2 { width: 290px; float: none; margin: 0 auto }
+
+
+
+/*	MENU */
+
+ul#main-nav { width: 290px; margin: 0 0 0 -15px; } 
+
+
+
+/* 	SIDEBAR */ 
+
+.widget { width: 290px; margin: 0 auto 20px auto; }
+
+form#searchform { margin: 0 auto 20px auto; }
+
+
+
+/* 	SOCIAL BOOKMARKS */ 
+
+#social { width: 290px; }
+#social-left { width: 290px; float: left; }
+#social-right { width: 290px; float: left; margin: 10px 0 20px 0; text-align: left; }
+
+
+
+/*	FOOTER */
+
+#footer { height: 110px; }
+#footer-inside { width: 290px; float: none; margin: 0 auto; }
+#footer-1 { width: 290px; }
