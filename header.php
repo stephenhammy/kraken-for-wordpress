@@ -8,7 +8,6 @@
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
-	<link href="//get.pictos.cc/fonts/1413/1" rel="stylesheet" type="text/css">
 
 	<!-- Mobile Screen Resizing -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5" />
@@ -36,10 +35,20 @@
 
 <body id="<?php echo $page ?>">
 
+	<!-- Old Browser Warning -->
+	<!--[if lte IE 6]>
+	<div class="old-browser">
+		<div class="old-browser-inner">
+			<p>Did you know that your web browser (<em>the program you're using to access the internet</em>) is a bit old? Upgrading to a new browser will provide you with a faster, better, and safer web experience.</p>
+			<p>Take a look at <a href="https://www.google.com/chrome" target="_new">Google Chrome</a> (<em>my personal favorite</em>), <a href="http://www.mozilla.org/firefox/" target="_new">Firefox</a>, or <a href="http://www.apple.com/safari/" target="_new">Safari</a>.</p>
+		</div>
+	</div>
+	<![endif]-->
+
 	<div class="navbar">
 		<div class="navbar-inner">
 
-			<a class="logo" href="<?php echo get_option('home'); ?>/"><i class="icon anchor"></i> <?php bloginfo('name'); ?></a>
+			<a class="logo" href="<?php echo get_option('home'); ?>/"><i class="anchor"></i> <?php bloginfo('name'); ?></a>
 
 			<ul class="nav">
 				<li class="home"><a href="<?php echo get_option('home'); ?>/">Home</a></li>

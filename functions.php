@@ -1,4 +1,6 @@
 <?php
+// Don't touch anything in here or the sky will fall on your head
+
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'before_widget' => '<div class="widget"><div class="inside">',

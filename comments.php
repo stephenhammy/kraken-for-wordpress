@@ -1,3 +1,5 @@
+<!-- This is the template for your comments section -->
+
 <?php // Do not delete these lines
 	if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');
@@ -95,7 +97,7 @@
 
 <?php if ('open' == $post->comment_status) : ?>
 
-<h2 id="respond">Leave a Comment</h2>
+<h2>Leave a Comment</h2>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
@@ -112,20 +114,20 @@
 <p><em>Your email address will not be published. Required fields are marked with an asterisk (<span style="color: #E0812A;">*</span>).</em></p>
 
 <label for="author">Name <span style="color: #E0812A;"><?php if ($req) echo "*"; ?></span></label>
-<input type="text" name="author" id="author" class="wide" value="<?php echo $comment_author; ?>" tabindex="1" />
+<input type="text" name="author" id="author" class="wide" value="<?php echo $comment_author; ?>" tabindex="1" required>
 
 <label for="email">Email <span style="color: #E0812A;"><?php if ($req) echo "*"; ?></span></label>
-<input type="text" name="email" id="email" class="wide" value="<?php echo $comment_author_email; ?>" tabindex="2" />
+<input type="email" name="email" id="email" class="wide" value="<?php echo $comment_author_email; ?>" tabindex="2" required>
 
 <label for="url">Website</label>
-<input type="text" name="url" id="url" class="wide" value="<?php echo $comment_author_url; ?>" tabindex="3" />
+<input type="url" name="url" id="url" class="wide" value="<?php echo $comment_author_url; ?>" tabindex="3">
 
 <?php endif; ?>
 
-<p><textarea name="comment" tabindex="4"></textarea></p>
+<textarea name="comment" tabindex="4" required></textarea>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" class="btn" />
-<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></p>
+<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" class="btn" />
+<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 
 <?php do_action('comment_form', $post->ID); ?>
 
