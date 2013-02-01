@@ -1,3 +1,9 @@
+/*	RESET */
+
+body { font-size: 11px; }
+
+
+
 /*	STRUCTURE */
 
 #page-wrap { width: 640px; }
@@ -32,4 +38,3 @@ form#searchform { margin: 20px 0 40px 0; }
 /*	FOOTER */
 
 #footer-inside { width: 640px; }
-#footer-1 { width: 640px; }

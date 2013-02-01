@@ -7,9 +7,7 @@
 
 
 	<!-- MOBILE SCREEN RESIZING -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.3" />
-	<meta name="HandheldFriendly" content="true" />
-	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<!-- END MOBILE SCREEN RESIZING -->
 
 	
@@ -27,7 +25,6 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/tablet.css" media="only screen and (min-width: 641px) and (max-width: 960px)" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/iphone.css" media="only screen and (max-width: 640px)" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/iphone.css" media="only screen and (max-device-width: 640px)" />
 	<!-- END STYLESHEETS -->
 
 
@@ -70,7 +67,7 @@
 		<div id="top-bar-bg">
 		<div id="top-bar">
 
-			<div id="top-bar-1"><h1 id="logo"><a id="logo" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1></div>
+			<div id="top-bar-1"><h1 id="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1></div>
 			
 			<div id="top-bar-2">	
 			<ul id="main-nav">

@@ -13,18 +13,18 @@
 				
 				<?php the_content('<p>Keep reading...</p>'); ?>
 
-				
-<div id="social">
-	<div id="social-left">
-		<ul>
-			<li><a rel="nofollow" href="http://twitter.com/?status=<?php the_title(); ?> <?php $turl = getBitlyUrl(get_permalink($post->ID)); echo $turl; ?> by @ChrisFerdinandi"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twittern.png" alt="Tweet This!" ></a></li>
-			<li><a rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php echo the_permalink(); ?>&t=<?php the_title(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebookn.png" alt="Facebook This!"></a></li>
-			<li><a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&body=<?php the_title(); ?>: <?php echo the_permalink(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/emailn.png" alt="Email This!"></a></li>
-		</ul>
-	</div>
-	<div id="social-right"><?php comments_popup_link('{ Leave a Comment }', '{ 1 Comment }', '{ % Comments }'); ?></div>
-</div>
+			</div>
 
+
+			<div class="social">
+				<div class="social-left">
+					<ul>
+						<li><a rel="nofollow" href="http://twitter.com/?status=<?php the_title(); ?>%20<?php $turl = getBitlyUrl(get_permalink($post->ID)); echo $turl; ?>%20by%20@ChrisFerdinandi"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twittern.png" alt="Tweet This!" ></a></li>
+						<li><a rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php echo the_permalink(); ?>&t=<?php the_title(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebookn.png" alt="Facebook This!"></a></li>
+						<li><a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php the_title(); ?>:%20<?php echo the_permalink(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/emailn.png" alt="Email This!"></a></li>
+					</ul>
+				</div>
+				<div class="social-right"><?php comments_popup_link('{ Leave a Comment }', '{ 1 Comment }', '{ % Comments }'); ?></div>
 			</div>
 
 

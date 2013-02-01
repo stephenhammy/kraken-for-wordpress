@@ -36,7 +36,7 @@
 			
 			<div class="comment-bubble">
 				<?php if ($comment->comment_approved == '0') : ?>
-					<p>Because your comment contained a link, it's awaiting moderation. As long as it's not spam, I'll approve asap!</p>
+					<p>Your comment is being held for moderation, which means it either had a link in it, or my blog thought it was spam. If you're not sure why you're seeing this, send me an email at hello (at) gomakethings (dot) com. As long as it's not spam, I'll approve asap!</p>
 				<?php endif; ?>
 
 				<div class="comment-info">
@@ -107,7 +107,7 @@
 
 <?php if ( $user_ID ) : ?>
 
-<p class="comment-text">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Logout &raquo;</a></p>
+<p class="comment-text"><em>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Logout &raquo;</a></em></p>
 
 <?php else : ?>
 

@@ -13,15 +13,15 @@
 
 			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 
-<div id="social">
-	<ul>
-		<li><a rel="nofollow" href="http://twitter.com/?status=<?php the_title(); ?> <?php $turl = getBitlyUrl(get_permalink($post->ID)); echo $turl; ?> by @ChrisFerdinandi"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twittern.png" alt="Tweet This!" ></a></li>
-		<li><a rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php echo the_permalink(); ?>&t=<?php the_title(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebookn.png" alt="Facebook This!"></a></li>
-		<li><a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&body=<?php the_title(); ?>: <?php echo the_permalink(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/emailn.png" alt="Email This!"></a></li>
-	</ul>
-</div>
+		</div>
 
 
+		<div class="social">
+			<ul>
+				<li><a rel="nofollow" href="http://twitter.com/?status=<?php the_title(); ?>%20<?php $turl = getBitlyUrl(get_permalink($post->ID)); echo $turl; ?>%20by%20@ChrisFerdinandi"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twittern.png" alt="Tweet This!" ></a></li>
+				<li><a rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php echo the_permalink(); ?>&t=<?php the_title(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebookn.png" alt="Facebook This!"></a></li>
+				<li><a rel="nofollow" href="mailto:?subject=<?php the_title(); ?>&amp;body=<?php the_title(); ?>:%20<?php echo the_permalink(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/emailn.png" alt="Email This!"></a></li>
+			</ul>
 		</div>
 
 
