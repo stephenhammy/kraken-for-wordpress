@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<div id="main-col" class="post">
+<div main="main">
 
 	<?php if (have_posts()) : ?>
 	
-		<h1 class="h2">Search Results</h1>
+		<h2>Search Results</h2>
 	
 		<?php while (have_posts()) : the_post(); ?>
 	
@@ -16,8 +16,8 @@
 	
 	<!-- Previous/Next page navigation -->
 	<div class="page-nav">
-		<div class="nav-previous"><p><?php previous_posts_link('← Newer Entries') ?></p></div>
-		<div class="nav-next"><p><?php next_posts_link('Older Entries →') ?></p></div>
+		<div class="nav-new"><p><?php previous_posts_link('&larr; Newer') ?></p></div>
+		<div class="nav-old"><p><?php next_posts_link('Older &rarr;') ?></p></div>
 	</div>
 	
 	<?php else : ?>

@@ -1,21 +1,18 @@
-		
-		<div class="clear"></div>
-		
 	</div>
-	
-	<div id="footer">
-		<div id="footer-inside">
-			
-			<p><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Copyright</a> © 2010 - <?php echo date('Y');?> <a href="http://gomakethings.com">Chris Ferdinandi</a>. <a href="http://gomakethings.com/disclaimer/">Disclaimer & Stuff</a>.</p>
 
-			<p>Made with love in Massachusetts.</p>
+	<div class="footer">
+		<div class="footer-inside">
+			
+			<p>Made in Massachusetts by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Remix freely under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons</a>. <a href="http://gomakethings.com/disclaimer/">Disclaimers & Stuff</a>.</p>
+
+			<p><a href="http://www.everythingisaremix.info/watch-the-series/">Copy. Transform. Combine.</a></p>
 			
 		</div>
 	</div>
 
 	<?php wp_footer(); ?>
 
-	<!-- Google Analytics>
+	<!-- Google Analytics>-->
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-5423447-9']);

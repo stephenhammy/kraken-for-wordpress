@@ -8,12 +8,16 @@
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
+	<link href="//get.pictos.cc/fonts/1413/1" rel="stylesheet" type="text/css">
 
 	<!-- Mobile Screen Resizing -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5" />
 
 	<!-- Icons -->
 	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.ico" />
+	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon-72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon-114.png">
 
 	<!-- Feeds & Pings -->
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="http://feeds.feedburner.com/GoMakeThings" />
@@ -32,23 +36,18 @@
 
 <body id="<?php echo $page ?>">
 
-	<div id="top-bar-bg">
-		<div id="top-bar">
+	<div class="navbar">
+		<div class="navbar-inner">
 
-			<div id="top-bar-1"><h1 id="logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1></div>
-			
-			<div id="top-bar-2">	
-			<ul id="main-nav">
+			<a class="logo" href="<?php echo get_option('home'); ?>/"><i class="icon anchor"></i> <?php bloginfo('name'); ?></a>
+
+			<ul class="nav">
 				<li class="home"><a href="<?php echo get_option('home'); ?>/">Home</a></li>
 				<li class="about"><a href="<?php echo get_option('home'); ?>/about/">About</a></li>
 				<li class="contact"><a href="<?php echo get_option('home'); ?>/contact/">Contact</a></li>
 			</ul>
-			<div class="clear"></div>
-			</div>
 
 		</div>
-		<div class="clear"></div>
 	</div>
 
-
-	<div id="page-wrap">
+	<div class="container">

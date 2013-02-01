@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div class="aside">
 
 	<div class="widget">
 
@@ -11,9 +11,11 @@
 
 		<h1>Get Free Updates</h1>
 
-		<p><a href="http://feeds.feedburner.com/GoMakeThings"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss-sb.png"> By RSS</a></p>
-		<p><a href="http://feedburner.google.com/fb/a/mailverify?uri=GoMakeThings&amp;loc=en_US"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/email-sb.png"> By Email</a></p>
-		<p><a href="http://twitter.com/ChrisFerdinandi"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter-sb.png"> On Twitter</a></p>
+		<ul class="unstyled">
+			<li><a href="http://feeds.feedburner.com/GoMakeThings"><i class="icon rss"></i> By RSS</a></li>
+			<li><a href="http://feedburner.google.com/fb/a/mailverify?uri=GoMakeThings&amp;loc=en_US"><i class="icon email"></i> By Email</a></li>
+			<li><a href="http://twitter.com/ChrisFerdinandi"><i class="icon twitter"></i> On Twitter</a></li>
+		</ul>
 
 	</div>
 
@@ -22,12 +24,14 @@
 
 		<h1>Browse</h1>
 
-		<p><a href="http://gomakethings.com/category/art-science/">Art & Science</a></p>
-		<p><a href="http://gomakethings.com/category/design-2/">Design</a></p>
-		<p><a href="http://gomakethings.com/category/leadership-innovation/">Leadership & Innovation</a></p>
-		<p><a href="http://gomakethings.com/category/marketing-2/">Marketing</a></p>
-		<p><a href="http://gomakethings.com/category/technology-2/">Technology</a></p>
-		<p><a href="http://gomakethings.com/category/uncategorized/">Other Stuff</a></p>
+		<ul class="unstyled">
+			<li><a href="http://gomakethings.com/category/art-science/">Art & Science</a></li>
+			<li><a href="http://gomakethings.com/category/design-2/">Design</a></li>
+			<li><a href="http://gomakethings.com/category/leadership-innovation/">Leadership & Innovation</a></li>
+			<li><a href="http://gomakethings.com/category/marketing-2/">Marketing</a></li>
+			<li><a href="http://gomakethings.com/category/technology-2/">Technology</a></li>
+			<li><a href="http://gomakethings.com/category/uncategorized/">Other Stuff</a></li>
+		</ul>
 
 	</div>
 
