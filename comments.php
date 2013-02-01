@@ -41,7 +41,7 @@
 
 				<div class="comment-info">
 
-					<div class="alignleft"><?php echo get_avatar( $comment, $size = '40', $default = 'http://renegadehr.net/wp-content/uploads/logos/missing-gravatar.png' ); ?></div>
+					<div class="alignleft"><?php echo get_avatar( $comment, $size = '40', $default = 'http://gomakethings.com/wp-content/themes/GoMakeThings/images/missing-gravatar.png' ); ?></div>
 
 					<p class="comment-name"><?php comment_author_link() ?></p>
 					<p class="comment-meta"><?php comment_date('F jS, Y') ?> at <?php comment_time() ?><span class="comment-text"><?php edit_comment_link('[Edit]', ' ', ''); ?></span></p>

@@ -1,6 +1,7 @@
 /*
 
-	GO MAKE THINGS THEME
+	GO MAKE THINGS THEME v2.0
+	March 8, 2012
 		 
 	Theme Name: Go Make Things
 	Author: Chris Ferdinandi
@@ -15,7 +16,8 @@
 	Tan: #ECE9E1
 	Dark Gray: #272727
 	Meta Gray: #808080
-	Dotted Gray: #A9A9A9
+	Dotted Gray: #A9A9A9 (Retired)
+	Lite Gray: #e5e5e5
 
 
 	FONT STACKS
@@ -51,7 +53,7 @@ table { border-collapse: collapse; }
 .floatRight { float: right; }
 .alignc { display: block; text-align: center; margin: 0 auto; }
 .clear { clear: both; } 
-.button { border: 1px solid #042440; background: #042440; padding: 3px 8px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -webkit-appearance: none; font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Arial, sans-serif; color: white; } 
+.button { border: 1px solid #042440; background: #042440; padding: 5px 8px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -webkit-appearance: none; font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Arial, sans-serif; color: white; } 
 .button:hover { border: 1px solid #48BDEE; background: #48BDEE; }
 .alignleft { float: left; margin: 0 15px 20px 0; }
 .alignright { float: right; margin: 0 0 20px 15px; }
@@ -67,13 +69,26 @@ table { border-collapse: collapse; }
 
 p { font-size: 1.5em; line-height: 1.5em; margin: 0 0 20px 0; }
 li { font-size: 1.5em; line-height: 1.5em; margin: 0 0 10px 0; }
-h1 { font-size: 2.6em; font-family: "Century Gothic", Helvetica, Arial, sans-serif; font-weight: bold; margin: 0 0 10px 0; } 
-h1 a { text-decoration: none; color: #E0812A; }
-h1 a:hover { color: #272727;}
-h2 { font-size: 2.0em; font-family: "Century Gothic", Helvetica, Arial, sans-serif; font-weight: bold; margin: 0 0 20px 0; padding: 10px 0 0 0; }
-h2 a { text-decoration: none; color: #E0812A; }
-h2 a:hover { text-decoration: none; color: #272727;}
-h3 { font-size: 1.6em; font-family: "Century Gothic", Helvetica, Arial, sans-serif; font-weight: bold; margin: 0 0 20px 0; padding: 10px 0 0 0; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Century Gothic", Helvetica, Arial, sans-serif; font-weight: bold; margin: 0 0 20px 0; }
+h2, h3, h4, h5, h6 { padding: 10px 0 0 0; }
+h1, .h1 { font-size: 2.6em; } 
+h2, .h2 { font-size: 2.0em; }
+h3, .h3 { font-size: 1.6em; }
+h4, .h4 { font-size: 1.4em; text-transform: uppercase; }
+h1 a, h2 a, h3 a { color: #E0812A; text-decoration: none; }
+h1 a:hover, h2 a:hover, h3 a:hover { color: #272727; text-decoration: none; }
+
+.postmetadata { font-family: "Century Gothic", Helvetica, Arial, sans-serif; color: #808080; font-size: 1.2em; line-height: 1.2em; padding: 0; margin: -10px 0 20px 0; }
+.postmetadata a { text-decoration: none; color: #808080; }
+.postmetadata a:hover { text-decoration: underline; color: #E0812A; }
+
+.post { margin: 0 0 0 0; }
+.post a { color: #E0812A; text-decoration: none; } 
+.post a:hover { color: #272727; text-decoration: underline; }
+.post ul, ol { margin: -10px 0 10px 0; padding: 0 0 5px 50px; }
+
+.dotted { margin: 0 0 30px 0; border-bottom: 1px solid #e5e5e5; clear: both; }
 
 
 
@@ -93,19 +108,19 @@ input, textarea { padding: 5px; }
 
 /*	HEADER */
 
-#logo { font-size: 3.2em; font-family: "HVDComicSerifProRegular", Georgia, Times, serif; font-weight: normal; margin: -8px 0 0 0; }
+#logo { font-size: 2.8em; font-family: "HVDComicSerifProRegular", Georgia, Times, serif; font-weight: normal; margin: -8px 0 0 0; }
 #logo a { color: white; text-decoration: none; }
 #logo a:hover { color: #48BDEE; text-decoration: none; }
 #top-bar-bg { background: #042440; padding: 20px 0 5px 0; }
 #top-bar { width: 960px; margin: 0 auto; padding: 0; position: relative; }
-#top-bar-1 { width: 290px; float: left; }
-#top-bar-2 { width: 670px; float: left; }
+#top-bar-1 { width: 260px; float: left; }
+#top-bar-2 { width: 700px; float: left; }
 
 
 
 /*	MENU */
 
-#main-nav { width: 600px; float: left; text-align: left; margin: 0 0 0 0; } 
+#main-nav { width: 600px; float: left; margin: 0 0 0 0; } 
 #main-nav li { display: inline; }
 #main-nav li a { font-family: "Century Gothic", Helvetica, Arial, sans-serif; text-transform: lowercase; color: #48BDEE; font-size: 1.1em; padding: 5px 15px 5px 15px; }
 
@@ -116,25 +131,10 @@ input, textarea { padding: 5px; }
 
 
 
-/*	BLOG ENTRIES */
-
-.postmetadata { font-family: "Century Gothic", Helvetica, Arial, sans-serif; color: #808080; font-size: 1.2em; line-height: 1.2em; padding: 0 0 20px 0; margin: 0 0 0 0; }
-.postmetadata a { text-decoration: none; color: #808080; }
-.postmetadata a:hover { text-decoration: underline; color: #E0812A; }
-
-.post { margin: 0 0 0 0; }
-.post a { color: #E0812A; text-decoration: none; } 
-.post a:hover { color: #272727; text-decoration: underline; }
-.post ul, ol { margin: -10px 0 10px 0; padding: 0 0 5px 50px; }
-
-.dotted { width: 100%; margin: 0 0 20px 0; border-bottom: 1px dotted #A9A9A9; clear: both; }
-
-
-
 /* 	BLOCKQUOTE */ 
 
 blockquote { background: #ECE9E1; margin: 0 0 20px 0; padding: 20px 20px 1px 20px; font-style: italic; border-left: 8px solid #E0812A; }
-.clearboth { clear: both; }
+
 
 
 /*	CODE */
@@ -148,7 +148,7 @@ pre { font-family: Monaco, Andale Mono, Courier New, monospace; font-size: 1.5em
 /*	COMMENTS */
 
 ol.commentlist { list-style: none; margin: 30px 0 0 -50px; }
-.comment-bubble { border-bottom: 1px dotted #A9A9A9; }
+.comment-bubble { border-bottom: 1px solid #e5e5e5; }
 ol.commentlist li { margin: 0 0 30px 0; }
 
 #comment-info { position: relative; }
@@ -167,7 +167,7 @@ ol.commentlist li { margin: 0 0 30px 0; }
 
 /* 	PAGE NAVIGATION */ 
 
-.page-nav { clear: both; /* To clear any floats */ margin: 15px 0; padding: 2px 0; height: 22px; }
+.page-nav { clear: both; /* To clear any floats */ margin: 30px 0 15px 0; padding: 2px 0; height: 22px; }
 .nav-previous { float: left; text-align: left; margin: 2px 0; }
 .nav-next { float: right; text-align: right; margin: 2px 0; }
 .page-nav a { color: #E0812A; text-decoration: none; }
@@ -177,13 +177,14 @@ ol.commentlist li { margin: 0 0 30px 0; }
 
 
 
-/* 	SOCIAL BOOKMARKS */ 
+/* 	SOCIAL BOOKMARKS */
 
 .social { width: 640px; padding: 10px 0 20px 0; }
 .social-left { width: 400px; float: left; }
+.social-left a { font-family: "Century Gothic", Helvetica, Arial, sans-serif; color: #808080; font-size: 0.8em; line-height: 0.8em; }
 .social-right { width: 240px; float: right; font-size: 1.5em; line-height: 1.5em; margin: 0 0 20px 0; text-align: right; }
-.social-right a { color: #808080; text-decoration: none; }
-.social-right a:hover { color: #E0812A; text-decoration: underline; }
+.social a { color: #808080; text-decoration: none; }
+.social a:hover { color: #E0812A; text-decoration: underline; }
 .social ul { list-style: none; margin: 0; }
 .social li { display: inline; padding-right: 10px; }
 
@@ -191,7 +192,7 @@ ol.commentlist li { margin: 0 0 30px 0; }
 
 /* 	SIDEBAR */ 
 
-.widget { margin: 0 0 20px 0; padding: 0 0 20px 0; border-bottom: 1px dotted #A9A9A9; }
+.widget { margin: 0 0 20px 0; padding: 0 0 20px 0; border-bottom: 1px solid #e5e5e5; }
 .widget a { color: #E0812A; text-decoration: none; } 
 .widget a:hover { color: #272727; text-decoration: underline; }
 .widget h1 { font-size: 1.6em; font-family: "Century Gothic", Helvetica, Arial, sans-serif; font-weight: bold; margin: 0 0 10px 0; }
@@ -208,3 +209,79 @@ ol.commentlist li { margin: 0 0 30px 0; }
 #footer p { font-size: 1.4em; line-height: 1.4em; margin: 0 0 20px 0; }
 #footer a { color: white; text-decoration: none; } 
 #footer a:hover	{ color: #48BDEE; text-decoration: underline; }
+
+
+
+/*	RESPONSIVE DESIGN */
+
+/* Tablets */
+@media (min-width: 641px) and (max-width: 960px) {
+
+	/* Reset */
+	body { font-size: 11px; }
+
+	/* Structure */
+	#page-wrap { width: 640px; }
+	#main-col-nosidebar { width: 640px; }
+	#sidebar { width: 640px; margin: 20px 0 0 0; padding: 40px 0 0 0; border-top: 1px solid #e5e5e5; float: left; }
+
+	/* Header */
+	#top-bar { width: 640px; text-align: center; }
+	#top-bar-1 { width: 640px; }
+	#top-bar-2 { width: 640px; }
+
+	/* Menu */
+	ul#main-nav { width: 640px; }
+
+	/* Sidebar */ 
+	.widget { width: 640px; }
+	.widget h1 { font-size: 2.0em; }
+	.widget p { font-size: 1.5em; line-height: 1.5em; }
+	form#searchform { margin: 20px 0 40px 0; }
+
+	/* Footer */
+	#footer-inside { width: 640px; }
+
+}
+
+/* Smart Phones */
+@media (max-width: 640px) {
+
+	/* Reset */
+	body { font-size: 11px; }
+	img, iframe, iframe.alignc, embed, object, video, .wp-caption { max-width: 100%; height: auto; }
+
+	/* Typography */
+	h1 { font-size: 2.0em; } 
+	h2 { font-size: 1.6em; }
+	h3 { font-size: 1.4em; }
+	h4 { font-size: 1.2em; }
+
+	/* Structure */
+	#page-wrap { width: 100%; margin: 20px 0; }
+	#main-col { width: 90%; float: none; margin: 0 auto; }
+	#sidebar { width: 90%; margin: 20px auto 0 auto; padding: 20px 0 0 0; border-top: 1px solid #e5e5e5; float: none; }
+
+	/* Header */
+	#logo { font-size: 2.6em; }
+	#top-bar { width: 100%; text-align: center; }
+	#top-bar-1 { width: 90%; float: none; margin: 0 auto; }
+	#top-bar-2 { width: 90%; float: none; margin: 0 auto }
+
+	/* Menu */
+	#main-nav { width: 100%; } 
+
+	/* Sidebar */ 
+	.widget { margin: 0 auto 20px auto; }
+	.widget p { font-size: 1.5em; line-height: 1.5em; }
+	#searchform { margin: 0 auto 20px auto; }
+
+	/* Social Bookmarks */ 
+	.social { width: 100%; }
+	.social-left { width: 100%; float: left; }
+	.social-right { width: 100%; float: left; margin: 10px 0 20px 0; text-align: left; }
+
+	/* Footer */
+	#footer-inside { width: 90%; float: none; }
+
+}

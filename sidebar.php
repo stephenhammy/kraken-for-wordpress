@@ -1,12 +1,10 @@
 <div id="sidebar">
 
-
 	<div class="widget">
 
 		<p><strong>Go Make Things</strong> is a blog by Chris Ferdinandi, a pirate-obsessed designer in Boston, MA. <a href="http://gomakethings.com/about/">Learn more...</a></p>
 
 	</div>
-
 
 
 	<div class="widget">
@@ -20,16 +18,15 @@
 	</div>
 
 
-
 	<div class="widget">
 
 		<h1>Browse</h1>
 
 		<p><a href="http://gomakethings.com/category/art-science/">Art & Science</a></p>
-		<p><a href="http://gomakethings.com/category/leadership-innovation/">Leadership & Innovation</a></p>
 		<p><a href="http://gomakethings.com/category/design-2/">Design</a></p>
+		<p><a href="http://gomakethings.com/category/leadership-innovation/">Leadership & Innovation</a></p>
 		<p><a href="http://gomakethings.com/category/marketing-2/">Marketing</a></p>
-		<p><a href="http://gomakethings.com/category/social-media-2/">Social Media</a></p>
+		<p><a href="http://gomakethings.com/category/technology-2/">Technology</a></p>
 		<p><a href="http://gomakethings.com/category/uncategorized/">Other Stuff</a></p>
 
 	</div>
