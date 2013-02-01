@@ -19,7 +19,7 @@
 	<h1>&#9875; Go Make Things</h1>
 	<p>We're doing some routine maintenance, but we'll be back soon!</p>
 
-	<p>In the meantime, why not sign-up for free updates <a href="http://feeds.feedburner.com/GoMakeThings">by RSS</a>, <a href="http://feedburner.google.com/fb/a/mailverify?uri=GoMakeThings&loc=en_US">by email</a>, or <a href="http://twitter.com/ChrisFerdinandi">on Twitter</a>?</p>
+	<p>In the meantime, why not <a href="http://feeds.feedburner.com/GoMakeThings">grab the RSS feed</a> or <a href="http://twitter.com/ChrisFerdinandi">follow me on Twitter</a>?</p>
 
 </body>
 

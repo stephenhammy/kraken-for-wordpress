@@ -3,27 +3,28 @@
 	<?php if (have_posts()) : ?>
 
 			<?php while (have_posts()) : the_post(); ?>
-				<article id="post-<?php the_ID(); ?>">
+				<article>
 
 					<header>
-						<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-						<aside class="meta"><?php the_time('F j, Y') ?><?php edit_post_link('[Edit]', '<br>', ''); ?></aside>
+						<h1 class="small-space-bottom"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+						<aside>
+							<p class="muted text-center"><?php the_time('F j, Y') ?><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
+						</aside>
 					</header>
 
 					<?php the_content('<p>Keep reading...</p>'); ?>
 
-					<p class="text-center padding-top"><a class="muted" href="<?php comments_link(); ?>"><i class="icon chat"></i> <?php comments_number( 'Leave a Comment', '1 Comment', '% Comments' ); ?></a></p>
+					<p class="text-center padding-top"><a href="<?php comments_link(); ?>"><i class="icon-chat"></i> <?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></a></p>
 
 				</article>
 
-
-				<div class="dotted"></div>
+				<hr>
 
 			<?php endwhile; ?>
 
 		<!-- Previous/Next page navigation -->
 		<nav>
-			<p class="text-center"><?php posts_nav_link( '&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;', '&larr; Newer', 'Older &rarr;' ); ?></p>
+			<p class="text-center"><?php posts_nav_link( '<span class="muted">&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;</span>', '&larr; Newer', 'Older &rarr;' ); ?></p>
 		</nav>
 
 	<?php else : ?>

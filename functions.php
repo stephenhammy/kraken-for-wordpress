@@ -1,11 +1,83 @@
 <?php
-// Register jquery
-// CSS-Tricks.com
-if( !is_admin()){
+
+// CDN-HOSTED JQUERY
+function my_scripts_method() {
 	wp_deregister_script('jquery'); 
-	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"), false, '1.7.2'); 
+	wp_register_script('jquery', 'http://code.jquery.com/jquery.min.js', false, null, true); 
 	wp_enqueue_script('jquery');
+	wp_register_script('gmt-js', get_template_directory_uri() . '/js/gmt-min.js', false, null, true); 
+	wp_enqueue_script('gmt-js');
 }
+add_action('wp_enqueue_scripts', 'my_scripts_method');
+
+
+
+// SEARCH FORM SHORTCODE
+// http://viewportindustries.com/products/starkers/
+function gmt_wpsearch() {
+	$form = '<form class="text-center no-space-bottom" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+	<label class="screen-reader" for="s">Search this site:</label>
+	<input type="text" class="input-search input-small" placeholder="Search this site..." value="' . get_search_query() . '" name="s" id="s">
+	<button type="submit" id="searchsubmit" value="Search" class="btn-search"><i class="icon-search"></i> <span class="screen-reader">Search</span></button>
+	</form>';
+	return $form;
+}
+add_shortcode( 'searchform', 'gmt_wpsearch' );
+
+
+
+// EXCLUDE PAGES FROM SEARCH
+// http://bavotasan.com/2010/excluding-pages-from-wordpress-search/
+function SearchFilter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
+
+
+
+// REMOVE TRACKBACKS FROM COMMENTS
+// http://weblogtoolscollection.com/archives/2008/03/08/managing-trackbacks-and-pingbacks-in-your-wordpress-theme/
+add_filter('comments_array', 'filterTrackbacks', 0);
+add_filter('the_posts', 'filterPostComments', 0);
+//Updates the comment number for posts with trackbacks
+function filterPostComments($posts) {
+    foreach ($posts as $key => $p) {
+        if ($p->comment_count <= 0) { return $posts; }
+        $comments = get_approved_comments((int)$p->ID);
+        $comments = array_filter($comments, "stripTrackback");
+        $posts[$key]->comment_count = sizeof($comments);
+    }
+    return $posts;
+}
+//Updates the count for comments and trackbacks
+function filterTrackbacks($comms) {
+global $comments, $trackbacks;
+    $comments = array_filter($comms,"stripTrackback");
+    return $comments;
+}
+//Strips out trackbacks/pingbacks
+function stripTrackback($var) {
+    if ($var->comment_type == 'trackback' || $var->comment_type == 'pingback') { return false; }
+    return true;
+}
+
+
+
+
+// REMOVE HEADER JUNK
+// http://www.themelab.com/2010/07/11/remove-code-wordpress-header/
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'start_post_rel_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'adjacent_posts_rel_link');
+
+
+
 // HTML Minify
 // http://www.intert3chmedia.net/2011/12/minify-html-javascript-css-without.html
 class WP_HTML_Compression {

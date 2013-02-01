@@ -1,8 +1,7 @@
 		<footer class="small muted text-center">
-			<div class="dotted"></div>
+			<hr>
 
-			<p>Hand crafted by Chris Ferdinandi.<br>Remix freely under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons</a>. <a href="http://gomakethings.com/disclaimer/">Disclaimers</a>.</p>
-			
+			<p>Hand crafted by Chris Ferdinandi.<br>Remix freely under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons</a>. <a href="http://gomakethings.com/disclaimer/">Disclaimers</a>.</p>			
 		</footer>
 
 	</section><!--/container-->
@@ -20,10 +19,6 @@
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	</script>
-
-	<!-- Javascript -->
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/gmt-min.js"></script>
-	<script>$(".container").fitVids();</script>
 
 </body>
 
