@@ -1,14 +1,11 @@
-	</div>
+		<footer class="small muted text-center">
+			<div class="dotted"></div>
 
-	<div class="footer">
-		<div class="footer-inside">
+			<p>Hand crafted by Chris Ferdinandi.<br>Remix freely under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons</a>. <a href="http://gomakethings.com/disclaimer/">Disclaimers</a>.</p>
 			
-			<p>Made in Massachusetts by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Remix freely under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons</a>. <a href="http://gomakethings.com/disclaimer/">Disclaimers & Stuff</a>.</p>
+		</footer>
 
-			<p><a href="http://www.everythingisaremix.info/watch-the-series/">Copy. Transform. Combine.</a></p>
-			
-		</div>
-	</div>
+	</section><!--/container-->
 
 	<?php wp_footer(); ?>
 
@@ -24,17 +21,9 @@
 	  })();
 	</script>
 
-	<!-- Social Popup -->
-	<script language="javascript">
-	var popupWindow = null;
-	function centeredPopup(url,winName,w,h,scroll){
-	LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
-	TopPosition = (screen.height) ? (screen.height-h)/2.5 : 0;
-	settings =
-	'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
-	popupWindow = window.open(url,winName,settings)
-	}
-	</script>
+	<!-- Javascript -->
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/gmt-min.js"></script>
+	<script>$(".container").fitVids();</script>
 
 </body>
 
