@@ -1,25 +1,25 @@
-		<footer class="small muted text-center">
-			<hr>
+<!-- ======================================================================
+  -- Footer.php
+  -- Template for footer content.
+  -- ====================================================================== -->
 
-			<p>Hand crafted by Chris Ferdinandi.<br>Remix freely under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons</a>. <a href="http://gomakethings.com/disclaimer/">Disclaimers</a>.</p>			
-		</footer>
+		    <footer>
+			    <p>Copyright &copy; <?php bloginfo('name'); ?>. All rights reserved.</p>			
+		    </footer>
 
-	</section><!--/container-->
+	    </section>
 
-	<?php wp_footer(); ?>
+        <!-- WordPress footer functions (jQuery and custom JS files added here by functions.php) -->
+	    <?php wp_footer(); ?>
 
-	<!-- Google Analytics>-->
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-5423447-9']);
-	  _gaq.push(['_trackPageview']);
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
 
-</body>
-
+    </body>
 </html>
