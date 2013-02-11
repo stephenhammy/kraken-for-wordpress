@@ -47,8 +47,8 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 function kraken_wpsearch() {
 	$form = '<form method="get" id="searchform" action="' . home_url( '/' ) . '" >
 	<label class="screen-reader" for="s">Search this site:</label>
-	<input type="text" class="input-search input-small" placeholder="Search this site..." value="' . get_search_query() . '" name="s" id="s">
-	<button type="submit" id="searchsubmit" value="Search">Search</button>
+	<input type="text" placeholder="Search this site..." value="' . get_search_query() . '" name="s" id="s">
+	<input type="submit" id="searchsubmit" value="Search">
 	</form>';
 	return $form;
 }
