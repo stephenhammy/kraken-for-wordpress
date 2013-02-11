@@ -42,6 +42,15 @@
     margin-right: auto;
 }
 
+/*  Image Caption Styling */
+.wp-caption-text { 
+    font-size: .882352941em; 
+    font-style: italic; 
+    color: #808080; 
+    padding-top: .470588235em; 
+    text-align: center; 
+}
+
 @media (min-width: 30em) {
 
     /*  On bigger screens, float .alignleft images
