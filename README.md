@@ -13,6 +13,8 @@ Kraken for WordPress was built as an add-on for the [Kraken boilerplate](http://
 Aside from the theme header and a few WordPress-specific classes, the stylesheet is empty. Drop in the Kraken boilerplate, or write your own stylesheet from scratch.
 
 ## Changelog
+* 2/15/2013
+  * Removed `media="screen"` from `header.php` to allow for print styles in main CSS file.
 * 2/10/2013
   * Initial release.
 

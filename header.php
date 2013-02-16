@@ -27,7 +27,7 @@
 
 
 	    <!-- Stylesheet -->
-	    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
+	    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
 
         <!-- HTML5 Shim for IE 6-8 -->
 	    <!--[if lt IE 9]>    
