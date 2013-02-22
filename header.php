@@ -52,7 +52,7 @@
         <meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/img/ms-touch-icon.png">
 
 	    <!-- Feeds & Pings -->
-	    <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="http://feeds.feedburner.com/GoMakeThings">
+	    <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
 	    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	
 	    <?php wp_head(); ?>
@@ -64,7 +64,7 @@
 	    <!-- Old Browser Warning -->
 	    <!-- If you're supporting IE 6-8, remove this -->
         <!--[if lt IE 9]>
-            Did you know that your web browser (<em>the program you're using to access the internet</em>) is a bit old? Some of the content on this site might not work right as a result. <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, better, and safer web experience.
+            Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, better, and safer web experience.
         <![endif]-->
 
 
