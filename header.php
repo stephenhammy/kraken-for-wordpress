@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Conditional class for older versions of IE -->
+<!--[if lt IE 9 & !IEMobile]><html class="ie" lang="en"><![endif]-->
+<!--[if gt IE 8 | IEMobile]><!--><html lang="en"><!--<![endif]-->
+
 <!-- ======================================================================
   -- Header.php
   -- Template for header content.
