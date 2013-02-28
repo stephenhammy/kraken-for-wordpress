@@ -30,7 +30,13 @@
 
 
 	    <!-- Stylesheet -->
-	    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
+	    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+
+	    <!-- Minified Stylesheet -->
+	    <!-- Remove link to regular stylesheet above if you're using a minified version. -->
+	    <!-- NOTE: You must keep style.css with theme info in your theme folder for WordPress to work. -->
+	    <!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style-min.css"> -->
+	    
 
         <!-- HTML5 Shim for IE 6-8 -->
 	    <!--[if lt IE 9]>    
