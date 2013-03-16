@@ -66,4 +66,10 @@
 	    float: right; 
 	    margin-left: .823529412em; 
 	}
+
+    /*  On bigger screens, remove left and right margins from .alignnone */
+	.alignnone {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
 }
