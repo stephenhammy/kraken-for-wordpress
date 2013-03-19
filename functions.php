@@ -77,6 +77,26 @@ remove_action('wp_head', 'adjacent_posts_rel_link');
 
 
 /* ======================================================================
+ * No-Self-Pings.php
+ * A simple function to prevent self-pings.
+ * Script by WPMU - http://wpmu.org/daily-tip-3-ways-to-remove-wordpress-self-pings/
+ * ====================================================================== */
+
+function no_self_ping( &$links ) {
+    $home = get_option( 'home' );
+    foreach ( $links as $l => $link ) {
+        if ( 0 === strpos( $link, $home ) ) {
+            unset($links[$l]);
+        }
+    }
+}
+add_action( 'pre_ping', 'no_self_ping' );
+
+
+
+
+
+/* ======================================================================
  * Exclude-Pages-from-Search.php
  * A simple function to exclude pages from your search results.
  * Script by C. Bavota.
