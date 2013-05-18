@@ -12,7 +12,7 @@
 		<article>
 
 			<header>
-				<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 				<aside>
 					<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
 				</aside>
