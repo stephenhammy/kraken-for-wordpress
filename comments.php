@@ -25,35 +25,29 @@
 
 <?php if ($comments) : ?>
 
-	<ul>
+    <?php foreach ($comments as $comment) : ?>
 
-	    <?php foreach ($comments as $comment) : ?>
+        <article id="comment-<?php comment_ID() ?>">
+	
+	        <?php if ($comment->comment_approved == '0') : ?>
+		        <p>Your comment is being held for moderation.</p>
+	        <?php endif; ?>
 
-	        <li id="comment-<?php comment_ID() ?>">
-		
-		        <?php if ($comment->comment_approved == '0') : ?>
-			        <p>Your comment is being held for moderation.</p>
-		        <?php endif; ?>
+	        <header class="group">
+		        <figure>
+			        <p><?php echo get_avatar( $comment, $size = '120' ); // $size at 2x for retina displays ?></p>
+		        </figure>
+		        <h3><?php comment_author_link() ?></h3>
+		        <aside>
+			        <p><?php comment_date('F jS, Y') ?><?php edit_comment_link('[Edit]', ' - ', ''); ?></p>
+		        </aside>
+	        </header>
 
-		        <article>
-			        <header class="group">
-				        <figure>
-					        <p><?php echo get_avatar( $comment, $size = '120' ); // $size at 2x for retina displays ?></p>
-				        </figure>
-				        <h3><?php comment_author_link() ?></h3>
-				        <aside>
-					        <p><?php comment_date('F jS, Y') ?><?php edit_comment_link('[Edit]', ' - ', ''); ?></p>
-				        </aside>
-			        </header>
+	        <?php comment_text() ?>
+	
+        </article>
 
-			        <?php comment_text() ?>
-		        <article>
-		
-	        </li>
-
-		<?php endforeach; // end for each comment ?>
-
-	</ul>
+	<?php endforeach; // end for each comment ?>
 
 
 
