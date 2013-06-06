@@ -13,7 +13,7 @@ Kraken for WordPress was built as an add-on for the [Kraken boilerplate](http://
 Aside from the theme header and a few WordPress-specific classes, the stylesheet is empty. Drop in the Kraken boilerplate, or write your own stylesheet from scratch.
 
 ## Documentation
-Because most of the code in Kraken for WordPress uses standard WordPress functions, it doesn't incldue a lot of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
+Because most of the code in Kraken for WordPress uses standard WordPress functions, it doesn't include a lot of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
 
 ## Changelog
 * v1.2 (February 19, 2013)
