@@ -1,7 +1,7 @@
 <?php get_header();
 /* ======================================================================
- * Single.php
- * Template for individual blog posts.
+    Single.php
+    Template for individual blog posts.
  * ====================================================================== */
 ?>
 

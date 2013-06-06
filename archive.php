@@ -1,7 +1,7 @@
 <?php get_header(); 
 /* ======================================================================
- * Archive.php
- * Template for posts by category, tag, author, date, etc.
+    Archive.php
+    Template for posts by category, tag, author, date, etc.
  * ====================================================================== */
 ?>
 

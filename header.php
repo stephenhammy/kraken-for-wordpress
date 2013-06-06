@@ -3,11 +3,11 @@
 <!--[if lt IE 9 & !IEMobile]><html class="ie" lang="en"><![endif]-->
 <!--[if gt IE 8 | IEMobile]><!--><html lang="en"><!--<![endif]-->
 
-<!-- ======================================================================
-  -- Header.php
-  -- Template for header content.
-  -- You might also include site navigation in this file.
-  -- ====================================================================== -->
+<!--======================================================================
+    Header.php
+    Template for header content.
+    You might also include site navigation in this file.
+  --====================================================================== -->
 
     <head>
         <!-- Meta Info -->

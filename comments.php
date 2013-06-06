@@ -1,7 +1,7 @@
 <?php 
 /* ======================================================================
- * Comments.php
- * Template for post comments.
+    Comments.php
+    Template for post comments.
  * ====================================================================== */
 
     // Do not delete these lines

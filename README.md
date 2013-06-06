@@ -12,12 +12,15 @@ Kraken for WordPress was built as an add-on for the [Kraken boilerplate](http://
 
 Aside from the theme header and a few WordPress-specific classes, the stylesheet is empty. Drop in the Kraken boilerplate, or write your own stylesheet from scratch.
 
+## Documentation
+Because most of the code in Kraken for WordPress uses standard WordPress functions, it doesn't incldue a lot of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
+
 ## Changelog
-* 2/19/2013
+* v1.2 (February 19, 2013)
   * Added `no-self-pings.php` to the `functions.php` file.
-* 2/15/2013
+* v1.1 (February 15, 2013)
   * Removed `media="screen"` from `header.php` to allow for print styles in main CSS file.
-* 2/10/2013
+* v1.0 (February 10, 2013)
   * Initial release.
 
 ## License

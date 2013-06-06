@@ -1,22 +1,26 @@
-/*
+/* =============================================================
 
     Theme Name: Kraken for WordPress
     Author: Chris Ferdinandi
     Author URI: http://gomakethings.com
 
-
     Add your CSS to this file.
     
     Need a boilerplate? Check out Kraken.
     http://cferdinandi.github.com/kraken/
-	
-*/
+
+    Licensed under WTFPL.
+    http://www.wtfpl.net
+    
+ * ============================================================= */
 
 
-/*  WORDPRESS IMAGE CLASSES */
-/*  Styling for the classes WordPress automatically applies to images.
- *  These styles are NOT included in the Kraken boilerplate.
- *  (You'll probably want to include these later in the stylesheet.) */
+/* =============================================================
+    WORDPRESS IMAGE CLASSES
+    Styling for the classes WordPress automatically applies to images.
+    These styles are NOT included in the Kraken boilerplate.
+    (You'll probably want to include these later in the stylesheet.)
+ * ============================================================= */
 
 /*  Comment Avatar Styling 
  *  Class automatically applied to comment avatars. */

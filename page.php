@@ -1,7 +1,7 @@
 <?php get_header(); 
 /* ======================================================================
- * Page.php
- * Template for individual pages.
+    Page.php
+    Template for individual pages.
  * ====================================================================== */
 ?>
 

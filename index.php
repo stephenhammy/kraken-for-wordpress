@@ -1,7 +1,7 @@
 <?php get_header(); 
 /* ======================================================================
- * Index.php
- * Template for page that displays all of your posts.
+    Index.php
+    Template for page that displays all of your posts.
  * ====================================================================== */
 ?>
 

@@ -1,7 +1,7 @@
 <?php get_header(); 
 /* ======================================================================
- * Search.php
- * Template for search results.
+    Search.php
+    Template for search results.
  * ====================================================================== */
 ?>
 

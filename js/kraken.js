@@ -1,9 +1,13 @@
 /* =============================================================
- * ios-orientation-change-fix.js
- * Fixes zoom on rotation bug in iOS.
- * Script by @scottjehl, rebound by @wilto
- * https://github.com/scottjehl/iOS-Orientationchange-Fix
- * MIT / GPLv2 License
+
+    iOS Orientation Change Fix v1.0
+    Fixes zoom on rotation bug in iOS.
+
+    Script by @scottjehl, rebound by @wilto
+    https://github.com/scottjehl/iOS-Orientationchange-Fix
+
+    Licensed under MIT / GPLv2 License.
+    
  * ============================================================= */
 
 (function(w){
