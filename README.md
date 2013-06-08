@@ -17,6 +17,8 @@ Because most of the code in Kraken for WordPress uses standard WordPress functio
 
 ## Changelog
 * v1.3 (June 7, 2013)
+  * Switched to MIT license.
+* v1.3 (June 7, 2013)
   * Added more flexible way to link stylesheet in header.
 * v1.2 (February 19, 2013)
   * Added `no-self-pings.php` to the `functions.php` file.
@@ -26,4 +28,4 @@ Because most of the code in Kraken for WordPress uses standard WordPress functio
   * Initial release.
 
 ## License
-Kraken for WordPress is licensed under [WTFPL](http://www.wtfpl.net/).
+Kraken for WordPress is free to use under the [MIT License](http://gomakethings.com/mit/).
