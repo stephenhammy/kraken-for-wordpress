@@ -7,7 +7,8 @@
     Add a "#" before a function to deactivate it.
  * ====================================================================== */
 
-require_once('functions/load-js.php'); // Load external JS files
+require_once('functions/load-jquery.php'); // Load CDN-hosted jQuery file
+require_once('functions/load-js.php'); // Load external JS file
 require_once('functions/search-form-shortcode.php'); // A WordPress search form shortcode
 require_once('functions/remove-header-junk.php'); // Remove unneccessary junk that WordPress adds to the header
 require_once('functions/no-self-pings.php'); // Prevent self-pings
