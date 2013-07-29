@@ -18,6 +18,8 @@ Because most of the code in Kraken for WordPress uses standard WordPress functio
 ## Changelog
 * v1.4 (July 29, 2013)
   * Removed the canonical link from `header.php` (served no purpose).
+  * Split theme JS and jQuer into two separate functions.
+  * Function now calls CDN-hosted jQuery with local fallback.
 * v1.3 (June 7, 2013)
   * Switched to MIT license.
 * v1.3 (June 7, 2013)
