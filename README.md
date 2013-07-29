@@ -16,6 +16,8 @@ Aside from the theme header and a few WordPress-specific classes, the stylesheet
 Because most of the code in Kraken for WordPress uses standard WordPress functions, it doesn't include a lot of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
 
 ## Changelog
+* v1.4 (July 29, 2013)
+  * Removed the canonical link from `header.php` (served no purpose).
 * v1.3 (June 7, 2013)
   * Switched to MIT license.
 * v1.3 (June 7, 2013)
