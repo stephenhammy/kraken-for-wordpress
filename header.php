@@ -25,18 +25,6 @@
 	    <!-- Mobile Screen Resizing -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-	    <!-- Stylesheet -->
-	    <!-- If you minify your stylesheet, you can keep it in a separate file and simply change the filename below. -->
-	    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css">
-	    
-
-        <!-- HTML5 Shim for IE 6-8 -->
-	    <!--[if lt IE 9]>    
-		    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	    <![endif]-->
-
-
 	    <!-- Favicon -->
 	    <link rel="shortcut icon" type="image/ico" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico">
 
@@ -53,6 +41,15 @@
 	    <!-- Feeds & Pings -->
 	    <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
 	    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+	    <!-- Stylesheet -->
+	    <!-- If you minify your stylesheet, you can keep it in a separate file and simply change the filename below. -->
+	    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css">
+
+        <!-- HTML5 Shim for IE 6-8 -->
+	    <!--[if lt IE 9]>    
+		    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
 	
 	    <?php wp_head(); ?>
 
