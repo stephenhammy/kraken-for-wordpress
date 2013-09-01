@@ -1,8 +1,11 @@
-<?php get_header(); 
+<?php
+
 /* ======================================================================
-    Index.php
+    index.php
     Template for page that displays all of your posts.
  * ====================================================================== */
+
+    get_header();
 ?>
 
 
@@ -12,14 +15,18 @@
 		<article>
 
 			<header>
-				<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+				<!-- Title of post -->
+				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<aside>
-					<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
+					<!-- Date and edit link -->
+					<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
 				</aside>
 			</header>
 
+			<!-- Post content -->
 			<?php the_content('<p>Keep reading...</p>'); ?>
 
+			<!-- Link to comments -->
 			<p><a href="<?php comments_link(); ?>"><?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></a></p>
 
 		</article>
@@ -33,12 +40,9 @@
 	</nav>
 
 
+<!-- If no posts are found... -->
 <?php else : ?>
-	<article>
-		<header>
-			<h1>No Posts to Display</h1>
-		</header>
-	</article>
+	<?php get_template_part( 'no-posts' ); ?>
 <?php endif; ?>
 
 

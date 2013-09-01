@@ -1,8 +1,11 @@
-<?php get_header(); 
+<?php
+
 /* ======================================================================
-    Archive.php
+    archive.php
     Template for posts by category, tag, author, date, etc.
  * ====================================================================== */
+
+    get_header(); 
 ?>
 
 
@@ -10,22 +13,21 @@
 
 	<header>
 	    <h1>
-		    <?php $post = $posts[0]; // Set $post so that the_date() works. ?>
-		    <?php /* If this is a category archive */ if (is_category()) { ?>
+		    <?php if (is_category()) : ?>
 		        On <?php single_cat_title(); ?>...
-		    <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
+		    <?php elseif( is_tag() ) : ?>
 		        On <?php single_tag_title(); ?>...
-		    <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
+		    <?php elseif (is_day()) : ?>
 		        On <?php the_time('F jS, Y'); ?>...
-		    <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+		    <?php elseif (is_month()) : ?>
 		        From <?php the_time('F, Y'); ?>...
-		    <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
+		    <?php elseif (is_year()) : ?>
 		        From <?php the_time('Y'); ?>...
-		    <?php /* If this is an author archive */ } elseif (is_author()) { ?>
+		    <?php elseif (is_author()) : ?>
 		        Author Archive
-		    <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+		    <?php else : ?>
 		        Blog Archives
-		    <?php } ?>
+		    <?php endif; ?>
 		</h1>
 	</header>
 
@@ -35,14 +37,18 @@
 		<article>
 
 			<header>
+				<!-- Title of post -->
 				<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 				<aside>
+					<!-- Date and edit link -->
 					<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
 				</aside>
 			</header>
 
+			<!-- Post content -->
 			<?php the_content('<p>Keep reading...</p>'); ?>
 
+			<!-- Link to comments -->
 			<p><a href="<?php comments_link(); ?>"><?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></a></p>
 
 		</article>
@@ -51,17 +57,12 @@
 
 
 	<!-- Previous/Next page navigation -->
-	<nav>
-		<p><?php posts_nav_link( '&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;', '&larr; Newer', 'Older &rarr;' ); ?></p>
-	</nav>
+	<?php get_template_part( 'nav-page' ); ?>
 
 
+<!-- If no posts are found... -->
 <?php else : ?>
-	<article>
-		<header>
-            <h1>No posts to display</h1>
-		</header>
-	</article>
+	<?php get_template_part( 'no-posts' ); ?>
 <?php endif; ?>
 
 

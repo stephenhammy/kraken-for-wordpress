@@ -1,6 +1,6 @@
 /* =============================================================
 
-    Theme Name: Kraken for WordPress v1.4
+    Theme Name: Kraken for WordPress v2.0
     Author: Chris Ferdinandi
     Author URI: http://gomakethings.com
 
@@ -29,8 +29,8 @@
     margin-right: .823529412em;
     /*  Set $size to 2x desired size in comments.php
      *  for crisp images on retina screens. */
-    height: 50%;
-    width: 50%;
+    height: 3.529411765em;
+    width: 3.529411765em;
 }
 
 /*  Display all images as centered block elements.

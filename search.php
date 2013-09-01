@@ -1,15 +1,18 @@
-<?php get_header(); 
+<?php
+
 /* ======================================================================
-    Search.php
+    search.php
     Template for search results.
  * ====================================================================== */
+
+    get_header(); 
 ?>
 
 
 <?php if (have_posts()) : ?>
+
 	<header>
 		<h1>Search Results for "<?php the_search_query(); ?>"</h1>
-		<hr>
 	</header>
 
 	<?php while (have_posts()) : the_post(); ?>
@@ -17,14 +20,18 @@
 		<article>
 
 			<header>
+				<!-- Post title -->
 				<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 				<aside>
+					<!-- Date and edit link -->
 					<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
 				</aside>
 			</header>
 
+			<!-- Post content -->
 			<?php the_content('<p>Keep reading...</p>'); ?>
 
+			<!-- Link to comments -->
 			<p><a href="<?php comments_link(); ?>"><?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></a></p>
 
 		</article>
@@ -33,11 +40,10 @@
 
 
 	<!-- Previous/Next page navigation -->
-	<nav>
-		<p><?php posts_nav_link( '&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;', '&larr; Newer', 'Older &rarr;' ); ?></p>
-	</nav>
+	<?php get_template_part( 'nav-page' ); ?>
 
 
+<!-- If no search results were found... -->
 <?php else : ?>
 	<article>
 		<header>
@@ -45,7 +51,8 @@
 		</header>
 		<p>Sorry, your search didn't turn up any results. Maybe try using different keywords?</p>
 
-		<?php echo kraken_wpsearch(); ?>
+		<!-- Insert search form -->
+		<?php get_search_form(); ?>
 	</article>
 <?php endif; ?>
 	

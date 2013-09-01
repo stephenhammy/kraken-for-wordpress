@@ -1,8 +1,11 @@
-<?php get_header();
+<?php
+
 /* ======================================================================
     Single.php
     Template for individual blog posts.
  * ====================================================================== */
+
+    get_header();
 ?>
 
 
@@ -11,14 +14,18 @@
     <article>
 
 	    <header>
+            <!-- Post title -->
 		    <h1><?php the_title(); ?></h1>
 		    <aside>
+                <!-- Post date and edit link -->
 			    <p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
 		    </aside>
 	    </header>
 
+        <!-- Post content -->
 	    <?php the_content(); ?>
 
+        <!-- Post comments -->
 	    <?php comments_template(); ?>
 
     </article>

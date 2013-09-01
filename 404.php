@@ -1,11 +1,15 @@
-<?php get_header(); 
+<?php
+
 /* ======================================================================
     404.php
     Template for 404 error page.
  * ====================================================================== */
+
+    get_header(); 
 ?>
 
 
+<!-- 404 Content -->
 <article>
 	<header>
 		<h1>Page Not Found</h1>
@@ -18,7 +22,8 @@
         <li>An out-of-date link.</li>
     </ol>
 
-    <?php echo kraken_wpsearch(); ?>
+    <!-- Insert search form -->
+    <?php get_search_form(); ?>
 
 </article>
 

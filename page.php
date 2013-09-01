@@ -1,8 +1,11 @@
-<?php get_header(); 
+<?php
+
 /* ======================================================================
-    Page.php
+    page.php
     Template for individual pages.
  * ====================================================================== */
+
+    get_header(); 
 ?>
 
 
@@ -11,11 +14,14 @@
     <article>
 
 	    <header>
+            <!-- Page title -->
 		    <h1><?php the_title(); ?></h1>
 	    </header>
 
+        <!-- Page content -->
 	    <?php the_content(); ?>
 
+        <!-- Page edit link -->
 	    <?php edit_post_link('[Edit]', '<p>', '</p>'); ?>
 
     </article>

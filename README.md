@@ -1,5 +1,5 @@
 # Kraken for WordPress
-An add-on to the [Kraken boilerplate](http://cferdinandi.github.com/kraken/) for WordPress developers.
+A lightweight boilerplate for WordPress themes.
 
 Kraken for WordPress includes:
 
@@ -8,14 +8,23 @@ Kraken for WordPress includes:
 * A WordPress theme stylesheet with a few WordPress-specific classes that control image and avatar styling.
 
 ## Built for Kraken
-Kraken for WordPress was built as an add-on for the [Kraken boilerplate](http://cferdinandi.github.com/kraken/).
+Kraken for WordPress is designed as an add-on for [Kraken](http://cferdinandi.github.com/kraken/), a lightweight, mobile-first boilerplate for front-end web developers. It works great as a standalone product, too.
 
 Aside from the theme header and a few WordPress-specific classes, the stylesheet is empty. Drop in the Kraken boilerplate, or write your own stylesheet from scratch.
 
 ## Documentation
-Because most of the code in Kraken for WordPress uses standard WordPress functions, it doesn't include a lot of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
+Kraken for WordPress includes a moderate amount of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
 
 ## Changelog
+* v2.0 (September 1, 2013)
+  * Added templates for:
+    * Main navigation
+    * Next/previous page navigation
+    * "No posts found" message
+    * Search form
+  * Removed search form function (replaced with WordPress standard `searchform.php` template).
+  * Cleaned up  code and removed some unused snippets.
+  * Added `get_template_directory()` to `require_once` in `functions.php`.
 * v1.4 (July 29, 2013)
   * Removed the canonical link from `header.php` (served no purpose).
   * Split theme JS and jQuer into two separate functions.
