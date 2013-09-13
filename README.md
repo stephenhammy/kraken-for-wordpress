@@ -19,6 +19,7 @@ Kraken for WordPress includes a moderate amount of inline documentation. Please 
 * v2.1
   * Convert generic PHP functions to WordPress specific where applicable.
   * Add sanitization and validation for all data fields.
+  * Replace old comment form with new `comment_form()` function.
 * v3
   * Considering converting some functions to plugins.
 
