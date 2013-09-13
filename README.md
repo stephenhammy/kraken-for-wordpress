@@ -15,6 +15,13 @@ Aside from the theme header and a few WordPress-specific classes, the stylesheet
 ## Documentation
 Kraken for WordPress includes a moderate amount of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
 
+## Roadmap
+* v2.1
+  * Convert generic PHP functions to WordPress specific where applicable.
+  * Add sanitization and validation for all data fields.
+* v3
+  * Considering converting some functions to plugins.
+
 ## Changelog
 * v2.0 (September 1, 2013)
   * Added templates for:
