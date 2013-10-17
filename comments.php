@@ -1,4 +1,13 @@
 <?php
+
+/* ======================================================================
+	Comments.php
+	Template for post comments.
+ * ====================================================================== */
+
+?>
+
+<?php
 	// If post is password protected, don't display comments
 	if ( post_password_required() ) {
 		return;

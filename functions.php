@@ -1,5 +1,10 @@
 <?php
 
+/* ======================================================================
+	functions.php
+	For modifying and expanding core WordPress functionality.
+ * ====================================================================== */
+
 // Load theme scripts in the footer
 function kraken_load_theme_js() {
 	wp_register_script('kraken-theme-js', get_template_directory_uri() . '/js/scripts.js', false, null, true);
@@ -27,6 +32,7 @@ function kraken_post_password_form() {
 	return $form;
 }
 add_filter( 'the_password_form', 'kraken_post_password_form' );
+
 
 
 // Make the `wp_title` function more useful

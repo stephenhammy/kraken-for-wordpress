@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+
+/* ======================================================================
+	archive.php
+	Template for posts by category, tag, author, date, etc.
+ * ====================================================================== */
+
+get_header(); ?>
 
 
 <?php if (have_posts()) : ?>

@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+
+/* ======================================================================
+	index.php
+	Template for page that displays all of your posts.
+ * ====================================================================== */
+
+get_header(); ?>
 
 
 <?php if (have_posts()) : ?>

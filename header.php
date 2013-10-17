@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+
+/* ======================================================================
+	header.php
+	Template for header content.
+ * ====================================================================== */
+
+?><!DOCTYPE html>
 <!-- Conditional class for older versions of IE -->
 <!--[if lt IE 9 & !IEMobile]><html class="ie" <?php language_attributes(); ?>><![endif]-->
 <!--[if gt IE 8 | IEMobile]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
