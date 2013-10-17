@@ -4,24 +4,23 @@
 <?php if (have_posts()) : ?>
 
 	<header>
-		<h1 class="no-space">
+		<h1>
 			<?php /* If this is a category archive */ if (is_category()) { ?>
-				On <?php single_cat_title(); ?>...
+				<?php _e( 'Category:', 'kraken' ) ?> <?php single_cat_title(); ?>...
 			<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-				On <?php single_tag_title(); ?>...
+				<?php _e( 'Tag:', 'kraken' ) ?> <?php single_tag_title(); ?>...
 			<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-				On <?php the_time('F jS, Y'); ?>...
+				<?php _e( 'Day:', 'kraken' ) ?> <?php the_time('F jS, Y'); ?>...
 			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-				From <?php the_time('F, Y'); ?>...
+				<?php _e( 'Month:', 'kraken' ) ?> <?php the_time('F, Y'); ?>...
 			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-				From <?php the_time('Y'); ?>...
+				<?php _e( 'Year:', 'kraken' ) ?> <?php the_time('Y'); ?>...
 			<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-				Author Archive
+				<?php _e( 'Author Archive', 'kraken' ) ?>
 			<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-				Blog Archives
+				<?php _e( 'Blog Archive', 'kraken' ) ?>
 			<?php } ?>
 		</h1>
-		<hr>
 	</header>
 
 
@@ -30,17 +29,21 @@
 		<article>
 
 			<header>
-				<h1 class="no-space-bottom"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<aside>
-					<p class="text-muted text-center"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time> &bull; <a class="text-muted" href="<?php comments_link(); ?>"><?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></a><?php edit_post_link('Edit', ' &bull; ', ''); ?></p>
+					<p>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'F j, Y' ) ?></time> /
+						<a href="<?php comments_link(); ?>">
+							<?php comments_number( __( 'Respond', 'kraken' ), __( '1 Response', 'kraken' ), __( '% Responses', 'kraken' ) ); ?>
+						</a>
+						<?php edit_post_link( __( 'Edit', 'kraken' ), ' / ', '' ); ?>
+					</p>
 				</aside>
 			</header>
 
-			<?php the_content('<p>Keep reading...</p>'); ?>
+			<?php the_content( __( 'Read More', 'kraken' ) ); ?>
 
 		</article>
-
-		<hr>
 
 	<?php endwhile; ?>
 
