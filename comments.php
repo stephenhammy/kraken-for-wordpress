@@ -75,7 +75,7 @@
 			</div>
 
 			<div>
-				<input name="submit" type="submit" class="input-inline btn" id="submit" tabindex="5" value="<?php _e( 'Submit Comment', 'kraken' ) ?>">
+				<input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e( 'Submit Comment', 'kraken' ) ?>">
 				<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>">
 				<?php do_action('comment_form', $post->ID); ?>
 			</div>
