@@ -1,14 +1,6 @@
-<?php
-
 /* ======================================================================
-	no-posts.php
-	Template for when no posts are found.
+	404.php
+	Template for 404 error page.
  * ====================================================================== */
 
-?>
-
-<article>
-	<header>
-		<h1>No posts to display</h1>
-	</header>
-</article>
+ <?php _e( '', 'kraken' ) ?>

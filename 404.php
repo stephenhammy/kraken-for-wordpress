@@ -1,29 +1,27 @@
 <?php
 
 /* ======================================================================
-    404.php
-    Template for 404 error page.
+	404.php
+	Template for 404 error page.
  * ====================================================================== */
 
-    get_header(); 
-?>
+get_header(); ?>
 
 
-<!-- 404 Content -->
 <article>
 	<header>
-		<h1>Page Not Found</h1>
+		<h1><?php _e( 'Page Not Found', 'kraken' ) ?></h1>
 	</header>
 
-	<p>Sorry, but the page you were looking for doesn't exist. It looks like this was the result of either:</p>
+	<p><?php _e( 'Sorry, but the page you were looking for doesn\'t exist. It looks like this was the result of either:', 'kraken' ) ?></p>
 
-    <ol>
-        <li>A mistyped address.</li>
-        <li>An out-of-date link.</li>
-    </ol>
+	<ol>
+		<li><?php _e( 'A mistyped address.', 'kraken' ) ?></li>
+		<li><?php _e( 'An out-of-date link.', 'kraken' ) ?></li>
+	</ol>
 
-    <!-- Insert search form -->
-    <?php get_search_form(); ?>
+	<!-- Insert search form -->
+	<?php get_search_form(); ?>
 
 </article>
 
