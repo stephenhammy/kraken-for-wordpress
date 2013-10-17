@@ -34,7 +34,7 @@
 					<p>
 						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'F j, Y' ) ?></time> /
 						<a href="<?php comments_link(); ?>">
-							<?php comments_number( __( 'Respond', 'kraken' ), __( '1 Response', 'kraken' ), __( '% Responses', 'kraken' ) ); ?>
+							<?php comments_number( __( 'Comment', 'kraken' ), __( '1 Comment', 'kraken' ), __( '% Comments', 'kraken' ) ); ?>
 						</a>
 						<?php edit_post_link( __( 'Edit', 'kraken' ), ' / ', '' ); ?>
 					</p>

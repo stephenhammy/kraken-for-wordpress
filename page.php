@@ -11,7 +11,7 @@
 
 		<?php the_content(); ?>
 
-		<?php edit_post_link('[Edit]', '<p>', '</p>'); ?>
+		<?php edit_post_link( __( 'Edit', 'kraken' ), '<p>', '</p>' ); ?>
 
 	</article>
 

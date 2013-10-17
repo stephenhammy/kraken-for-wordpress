@@ -3,8 +3,7 @@
 
 <?php if (have_posts()) : ?>
 	<header>
-		<h1 class="no-space">Search Results for "<?php the_search_query(); ?>"</h1>
-		<hr>
+		<h1><?php echo sprintf( __( 'Search results for "%s"', 'kraken' ), the_search_query() ); ?></h1>
 	</header>
 
 	<?php while (have_posts()) : the_post(); ?>
@@ -12,23 +11,27 @@
 		<article>
 
 			<header>
-				<h1 class="no-space-bottom"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<?php if ( get_post_type() == 'post' ) : ?>
 					<aside>
-						<p class="text-muted text-center"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time> &bull; <a class="text-muted" href="<?php comments_link(); ?>"><?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></a><?php edit_post_link('Edit', ' &bull; ', ''); ?></p>
+						<p>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'F j, Y' ) ?></time> /
+							<a href="<?php comments_link(); ?>">
+								<?php comments_number( __( 'Comment', 'kraken' ), __( '1 Comment', 'kraken' ), __( '% Comments', 'kraken' ) ); ?>
+							</a>
+							<?php edit_post_link( __( 'Edit', 'kraken' ), ' / ', '' ); ?>
+						</p>
 					</aside>
 				<?php else : ?>
 					<aside>
-						<p class="text-muted text-center"><?php edit_post_link('Edit', '', ''); ?></p>
+						<?php edit_post_link( __( 'Edit', 'kraken' ), '', '' ); ?>
 					</aside>
 				<?php endif; ?>
 			</header>
 
-			<?php the_content('<p>Keep reading...</p>'); ?>
+			<?php the_content( __( 'Read More', 'kraken' ) ); ?>
 
 		</article>
-
-		<hr>
 
 	<?php endwhile; ?>
 
@@ -40,9 +43,9 @@
 <?php else : ?>
 	<article>
 		<header>
-			<h1>No Results Found for "<?php the_search_query(); ?>"</h1>
+			<h1><?php echo sprintf( __( 'No results found for "%s"', 'kraken' ), the_search_query() ); ?></h1>
 		</header>
-		<p>Sorry, your search didn't turn up any results. Maybe try using different keywords?</p>
+		<p><?php _e( 'Sorry, your search didn\'t turn up any results. Maybe try using different keywords?', 'kraken' ) ?></p>
 
 		<?php get_search_form(); ?>
 	</article>
