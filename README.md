@@ -1,29 +1,24 @@
 # Kraken for WordPress
-A lightweight boilerplate for WordPress themes.
-
-Kraken for WordPress includes:
-
-* The essential templates you need to start building a WordPress site.
-* Useful functions to help improve site performance and make development easier.
-* A WordPress theme stylesheet with a few WordPress-specific classes that control image and avatar styling.
+A lightweight boilerplate that includes just the essentials for building a WordPress theme.
+* Common template files with HTML5 semantic markup.
+* An (almost) empty stylesheet with just a few WordPress-specific classes.
+* A small set of custom functions to make development easier.
+* HTML5 Shim, friendly "old browser" messaging, and an IE-conditional class.
+* Fully internationalized and translation-ready.
 
 ## Built for Kraken
-Kraken for WordPress is designed as an add-on for [Kraken](http://cferdinandi.github.com/kraken/), a lightweight, mobile-first boilerplate for front-end web developers. It works great as a standalone product, too.
-
-Aside from the theme header and a few WordPress-specific classes, the stylesheet is empty. Drop in the Kraken boilerplate, or write your own stylesheet from scratch.
+Kraken for WordPress is designed as an add-on for [Kraken](http://cferdinandi.github.com/kraken/), a lightweight, mobile-first boilerplate for front-end web developers. It works great as a standalone product, too. Drop in the Kraken boilerplate, or write your own stylesheet from scratch.
 
 ## Documentation
 Kraken for WordPress includes a moderate amount of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
 
-## Roadmap
-* v2.1
-  * Convert generic PHP functions to WordPress specific where applicable.
-  * Add sanitization and validation for all data fields.
-  * Replace old comment form with new `comment_form()` function.
-* v3
-  * Considering converting some functions to plugins.
-
 ## Changelog
+* v3.0 (October 17, 2013)
+  * Add i18n everywhere.
+  * Updated several functions to be more aligned with WordPress best practices.
+  * Moved various functions to [standalone plugins](http://cferdinandi.github.io/kraken/addons.html).
+  * Converted from spaces to tabs.
+  * Added customized "password protected post" messaging.
 * v2.0 (September 1, 2013)
   * Added templates for:
     * Main navigation
@@ -35,7 +30,7 @@ Kraken for WordPress includes a moderate amount of inline documentation. Please 
   * Added `get_template_directory()` to `require_once` in `functions.php`.
 * v1.4 (July 29, 2013)
   * Removed the canonical link from `header.php` (served no purpose).
-  * Split theme JS and jQuer into two separate functions.
+  * Split theme JS and jQuery into two separate functions.
   * Function now calls CDN-hosted jQuery with local fallback.
 * v1.3 (June 7, 2013)
   * Switched to MIT license.

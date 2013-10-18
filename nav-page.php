@@ -1,12 +1,12 @@
 <?php
 
 /* ======================================================================
-    nav-page.php
-    Template for next/previous page navigation.
+	nav-page.php
+	Template for older/newer page navigation.
  * ====================================================================== */
 
 ?>
 
 <nav>
-    <p><?php posts_nav_link( '&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;', '&larr; Newer', 'Older &rarr;' ); ?></p>
+	<p><?php posts_nav_link( ' / ', __( '&larr; Newer', 'kraken' ), __( 'Older &rarr;', 'kraken' ) ); ?></p>
 </nav>

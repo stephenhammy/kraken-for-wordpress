@@ -4,7 +4,7 @@ Add your image files to this directory.
 Apple Touch Icons:
 * PNG files
 * Name: apple-touch-icon-*.png
-* Sizes: 
+* Sizes:
   * 57x57
   * 72x72
   * 114x114

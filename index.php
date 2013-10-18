@@ -1,12 +1,11 @@
 <?php
 
 /* ======================================================================
-    index.php
-    Template for page that displays all of your posts.
+	index.php
+	Template for page that displays all of your posts.
  * ====================================================================== */
 
-    get_header();
-?>
+get_header(); ?>
 
 
 <?php if (have_posts()) : ?>
@@ -15,34 +14,33 @@
 		<article>
 
 			<header>
-				<!-- Title of post -->
 				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<aside>
-					<!-- Date and edit link -->
-					<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
+					<p>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'F j, Y' ) ?></time> /
+						<a href="<?php comments_link(); ?>">
+							<?php comments_number( __( 'Comment', 'kraken' ), __( '1 Comment', 'kraken' ), __( '% Comments', 'kraken' ) ); ?>
+						</a>
+						<?php edit_post_link( __( 'Edit', 'kraken' ), ' / ', '' ); ?>
+					</p>
 				</aside>
 			</header>
 
-			<!-- Post content -->
-			<?php the_content('<p>Keep reading...</p>'); ?>
-
-			<!-- Link to comments -->
-			<p><a href="<?php comments_link(); ?>"><?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></a></p>
+			<?php the_content( __( 'Read More', 'kraken' ) ); ?>
 
 		</article>
+
+		<hr>
 
 	<?php endwhile; ?>
 
 
 	<!-- Previous/Next page navigation -->
-	<nav>
-		<p><?php posts_nav_link( '&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;', '&larr; Newer', 'Older &rarr;' ); ?></p>
-	</nav>
+	<?php get_template_part( 'nav-page', 'Page Navigation' ); ?>
 
 
-<!-- If no posts are found... -->
 <?php else : ?>
-	<?php get_template_part( 'no-posts' ); ?>
+	<?php get_template_part( 'no-posts', 'No Posts Template' ); ?>
 <?php endif; ?>
 
 

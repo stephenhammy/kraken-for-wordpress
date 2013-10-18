@@ -1,36 +1,37 @@
 <?php
 
 /* ======================================================================
-    Single.php
-    Template for individual blog posts.
+	Single.php
+	Template for individual blog posts.
  * ====================================================================== */
 
-    get_header();
-?>
+get_header(); ?>
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <article>
+	<article>
 
-	    <header>
-            <!-- Post title -->
-		    <h1><?php the_title(); ?></h1>
-		    <aside>
-                <!-- Post date and edit link -->
-			    <p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
-		    </aside>
-	    </header>
+			<header>
+				<h1><?php the_title(); ?></h1>
+				<aside>
+					<p>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'F j, Y' ) ?></time> /
+						<a href="<?php comments_link(); ?>">
+							<?php comments_number( __( 'Comment', 'kraken' ), __( '1 Comment', 'kraken' ), __( '% Comments', 'kraken' ) ); ?>
+						</a>
+						<?php edit_post_link( __( 'Edit', 'kraken' ), ' / ', '' ); ?>
+					</p>
+				</aside>
+			</header>
 
-        <!-- Post content -->
-	    <?php the_content(); ?>
+		<?php the_content(); ?>
 
-        <!-- Post comments -->
-	    <?php comments_template(); ?>
+		<?php comments_template(); ?>
 
-    </article>
+	</article>
 
 <?php endwhile; endif; ?>
 
-	
+
 <?php get_footer(); ?>

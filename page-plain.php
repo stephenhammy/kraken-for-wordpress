@@ -1,8 +1,9 @@
 <?php
 
 /* ======================================================================
-	page.php
-	Template for individual pages.
+	Template Name: Plain
+	Template for pages with no heading or meta data.
+	(Good for when you want more control over a page layout.)
  * ====================================================================== */
 
 get_header(); ?>
@@ -11,10 +12,6 @@ get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	<article>
-
-		<header>
-			<h1><?php the_title(); ?></h1>
-		</header>
 
 		<?php the_content(); ?>
 

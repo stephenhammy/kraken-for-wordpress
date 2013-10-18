@@ -1,105 +1,96 @@
 <?php
 
 /* ======================================================================
-    Comments.php
-    Template for post comments.
+	Comments.php
+	Template for post comments.
  * ====================================================================== */
-
-    /* If the current post is protected by a password and
-     * the visitor has not yet entered the password we will
-     * return early without loading the comments. */
-    if ( post_password_required() ) {
-        return;
-    }
 
 ?>
 
+<?php
+	// If post is password protected, don't display comments
+	if ( post_password_required() ) {
+		return;
+	}
+?>
 
-<h2 id="comments"><?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></h2>
+<?php if ( $comments ) : // If there are comments ?>
 
-<?php if ($comments) : ?>
+	<?php if ( comments_open() || $comments ) : ?>
+		<h2 id="comments"><?php comments_number( __( 'Comment', 'kraken' ), __( '1 Comment', 'kraken' ), __( '% Comments', 'kraken' ) ); ?></h2>
+	<?php endif; ?>
 
-    <?php foreach ($comments as $comment) : ?>
+	<?php foreach ($comments as $comment) : ?>
 
-        <article id="comment-<?php comment_ID() ?>">
-	
-            <!-- If comment is held for moderation -->
-	        <?php if ($comment->comment_approved == '0') : ?>
-		        <p>Your comment is being held for moderation.</p>
-	        <?php endif; ?>
+		<article id="comment-<?php comment_ID() ?>">
 
-            <!-- Template for each comment -->
-	        <header class="group">
-		        <figure>
-			        <p><?php echo get_avatar( $comment, $size = '120' ); // $size set to 2x for retina displays ?></p>
-		        </figure>
-		        <h3><?php comment_author_link(); ?></h3>
-		        <aside>
-			        <p><?php comment_date('F jS, Y') ?><?php edit_comment_link('[Edit]', ' - ', ''); ?></p>
-		        </aside>
-	        </header>
+			<?php if ($comment->comment_approved == '0') : // If the comment is held for moderation ?>
+				<p><?php _e( 'Your comment is being held for moderation.', 'kraken' ) ?></p>
+			<?php endif; ?>
 
-	        <?php comment_text(); ?>
-	
-        </article>
+			<header>
+				<figure>
+					<?php echo get_avatar( $comment, $size = '120' ); // $size at 2x for retina displays ?>
+				</figure>
+				<h3>
+					<?php comment_author_link() ?>
+				</h3>
+				<aside>
+					<?php comment_date('F jS, Y') ?><?php edit_comment_link('Edit', ' &bull; ', ''); ?>
+				</aside>
+			</header>
+
+			<?php comment_text() ?>
+
+		</article>
 
 	<?php endforeach; // end for each comment ?>
 
 
-<!-- If there aren't any comments yet -->
-<?php else : ?>
-
-    <!-- If comments are open, but there are no comments... -->
-	<?php if ('open' == $post->comment_status) : ?>
-		<!-- Add your message here (if desired). -->
-
-    <!-- if comments are closed... -->
-    <?php else : ?>
-		<!-- Add your message here (if desired). -->
-
-	<?php endif; ?>
+<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : // if there are no comments ?>
+	<p><?php _e( 'Comments are closed.', 'kraken' ) ?></p>
 <?php endif; ?>
 
 
-<!-- If comments are allowed... -->
-<?php if ('open' == $post->comment_status) : ?>
+<?php if ( comments_open() ) : // If comments are allowed ?>
 
-    <h2 id="respond">Leave a Reply</h2>
+	<h2 id="respond"><?php _e( 'Leave a Comment', 'kraken' ) ?></h2>
 
-    <!-- If user must be logged in to comment, and current user isn't... -->
-    <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-        <!-- Add your message here (if desired). -->
+	<?php if ( get_option('comment_registration') && !$user_ID ) : // If user must be logged in to comment ?>
+		<p><?php echo sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'kraken' ), wp_login_url( get_permalink() . '#respond' ) ); ?></p>
+	<?php else : ?>
+	<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
-    <!-- If anyone can leave a comment... -->	    
-    <?php else : ?>
+		<?php if ( $user_ID ) : // If user is logged in ?>
+			<p><?php echo sprintf( __( 'Logged in as %s.', 'kraken' ), $user_identity ); ?> <a href="<?php echo wp_logout_url( get_permalink() . '#respond' ); ?>"><?php _e( 'Logout', 'kraken' ) ?></a></p>
+		<?php else : ?>
+			<div>
+				<label for="author"><?php _e( 'Name', 'kraken' ) ?></label>
+				<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" required>
+			</div>
 
-        <form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
+			<div>
+				<label for="email"><?php _e( 'Email', 'kraken' ) ?></label>
+				<input type="email" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" required>
+			</div>
 
-            <!-- If user is already logged in, show their info. -->
-    	    <?php if ( $user_ID ) : ?>
-    		    <p>Logged in as <?php echo $user_identity; ?>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout">Logout</a></p>
+			<div>
+				<label for="url"><?php _e( 'Website (optional)', 'kraken' ) ?></label>
+				<input type="url" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" >
+			</div>
+		<?php endif; ?>
+			<div>
+				<textarea name="comment" id="comment" tabindex="4" required></textarea>
+			</div>
 
-            <!-- If not, ask for their info. -->
-    	    <?php else : ?>
-    		    <label for="author">Your Name</label>
-    		    <input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" required>
+			<div>
+				<input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e( 'Submit Comment', 'kraken' ) ?>">
+				<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>">
+				<?php do_action('comment_form', $post->ID); ?>
+			</div>
 
-    		    <label for="email">Your Email</label>
-    		    <input type="email" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" required>
+	</form>
 
-    		    <label for="url">Your Website (optional)</label>
-    		    <input type="url" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" >
-    	    <?php endif; ?>
+	<?php endif; // end if registration required and not logged in ?>
 
-    		    <textarea name="comment" id="comment" tabindex="4" required></textarea>
-
-    		    <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
-    		    <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-
-    		    <?php do_action('comment_form', $post->ID); ?>
-
-        </form>
-
-    <?php endif; // If registration required and not logged in ?>
-
-<?php endif; // If you delete this the sky will fall on your head ?>
+<?php endif; // end if comments are open ?>

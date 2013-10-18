@@ -1,33 +1,32 @@
 <?php
 
 /* ======================================================================
-    archive.php
-    Template for posts by category, tag, author, date, etc.
+	archive.php
+	Template for posts by category, tag, author, date, etc.
  * ====================================================================== */
 
-    get_header(); 
-?>
+get_header(); ?>
 
 
 <?php if (have_posts()) : ?>
 
 	<header>
-	    <h1>
-		    <?php if (is_category()) : ?>
-		        On <?php single_cat_title(); ?>...
-		    <?php elseif( is_tag() ) : ?>
-		        On <?php single_tag_title(); ?>...
-		    <?php elseif (is_day()) : ?>
-		        On <?php the_time('F jS, Y'); ?>...
-		    <?php elseif (is_month()) : ?>
-		        From <?php the_time('F, Y'); ?>...
-		    <?php elseif (is_year()) : ?>
-		        From <?php the_time('Y'); ?>...
-		    <?php elseif (is_author()) : ?>
-		        Author Archive
-		    <?php else : ?>
-		        Blog Archives
-		    <?php endif; ?>
+		<h1>
+			<?php /* If this is a category archive */ if (is_category()) { ?>
+				<?php _e( 'Category:', 'kraken' ) ?> <?php single_cat_title(); ?>...
+			<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
+				<?php _e( 'Tag:', 'kraken' ) ?> <?php single_tag_title(); ?>...
+			<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
+				<?php _e( 'Day:', 'kraken' ) ?> <?php the_time('F jS, Y'); ?>...
+			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+				<?php _e( 'Month:', 'kraken' ) ?> <?php the_time('F, Y'); ?>...
+			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
+				<?php _e( 'Year:', 'kraken' ) ?> <?php the_time('Y'); ?>...
+			<?php /* If this is an author archive */ } elseif (is_author()) { ?>
+				<?php _e( 'Author Archive', 'kraken' ) ?>
+			<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+				<?php _e( 'Blog Archive', 'kraken' ) ?>
+			<?php } ?>
 		</h1>
 	</header>
 
@@ -37,19 +36,19 @@
 		<article>
 
 			<header>
-				<!-- Title of post -->
-				<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<aside>
-					<!-- Date and edit link -->
-					<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y') ?></time><?php edit_post_link('[Edit]', ' - ', ''); ?></p>
+					<p>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'F j, Y' ) ?></time> /
+						<a href="<?php comments_link(); ?>">
+							<?php comments_number( __( 'Comment', 'kraken' ), __( '1 Comment', 'kraken' ), __( '% Comments', 'kraken' ) ); ?>
+						</a>
+						<?php edit_post_link( __( 'Edit', 'kraken' ), ' / ', '' ); ?>
+					</p>
 				</aside>
 			</header>
 
-			<!-- Post content -->
-			<?php the_content('<p>Keep reading...</p>'); ?>
-
-			<!-- Link to comments -->
-			<p><a href="<?php comments_link(); ?>"><?php comments_number( 'Respond', '1 Response', '% Responses' ); ?></a></p>
+			<?php the_content( __( 'Read More', 'kraken' ) ); ?>
 
 		</article>
 
@@ -57,12 +56,11 @@
 
 
 	<!-- Previous/Next page navigation -->
-	<?php get_template_part( 'nav-page' ); ?>
+	<?php get_template_part( 'nav-page', 'Page Navigation' ); ?>
 
 
-<!-- If no posts are found... -->
 <?php else : ?>
-	<?php get_template_part( 'no-posts' ); ?>
+	<?php get_template_part( 'no-posts', 'No Posts Template' ); ?>
 <?php endif; ?>
 
 
