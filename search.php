@@ -10,7 +10,7 @@ get_header(); ?>
 
 <?php if (have_posts()) : ?>
 	<header>
-		<h1><?php echo sprintf( __( 'Search results for "%s"', 'kraken' ), the_search_query() ); ?></h1>
+		<h1><?php printf( __( 'Search results for "%s"', 'kraken' ), the_search_query() ); ?></h1>
 	</header>
 
 	<?php while (have_posts()) : the_post(); ?>
@@ -50,7 +50,7 @@ get_header(); ?>
 <?php else : ?>
 	<article>
 		<header>
-			<h1><?php echo sprintf( __( 'No results found for "%s"', 'kraken' ), the_search_query() ); ?></h1>
+			<h1><?php printf( __( 'No results found for "%s"', 'kraken' ), the_search_query() ); ?></h1>
 		</header>
 		<p><?php _e( 'Sorry, your search didn\'t turn up any results. Maybe try using different keywords?', 'kraken' ) ?></p>
 

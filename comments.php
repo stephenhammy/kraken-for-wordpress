@@ -57,12 +57,12 @@
 	<h2 id="respond"><?php _e( 'Leave a Comment', 'kraken' ) ?></h2>
 
 	<?php if ( get_option('comment_registration') && !$user_ID ) : // If user must be logged in to comment ?>
-		<p><?php echo sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'kraken' ), wp_login_url( get_permalink() . '#respond' ) ); ?></p>
+		<p><?php printf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'kraken' ), wp_login_url( get_permalink() . '#respond' ) ); ?></p>
 	<?php else : ?>
 	<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
 		<?php if ( $user_ID ) : // If user is logged in ?>
-			<p><?php echo sprintf( __( 'Logged in as %s.', 'kraken' ), $user_identity ); ?> <a href="<?php echo wp_logout_url( get_permalink() . '#respond' ); ?>"><?php _e( 'Logout', 'kraken' ) ?></a></p>
+			<p><?php printf( __( 'Logged in as %s.', 'kraken' ), $user_identity ); ?> <a href="<?php echo wp_logout_url( get_permalink() . '#respond' ); ?>"><?php _e( 'Logout', 'kraken' ) ?></a></p>
 		<?php else : ?>
 			<div>
 				<label for="author"><?php _e( 'Name', 'kraken' ) ?></label>

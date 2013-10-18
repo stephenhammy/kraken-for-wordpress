@@ -33,7 +33,7 @@
 		<meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/img/ms-touch-icon.png">
 
 		<!-- Feeds & Pings -->
-		<link rel="alternate" type="application/rss+xml" title="<?php echo sprintf( __( '%s RSS Feed', 'kraken' ), get_bloginfo( 'name' ) ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>">
+		<link rel="alternate" type="application/rss+xml" title="<?php printf( __( '%s RSS Feed', 'kraken' ), get_bloginfo( 'name' ) ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<!-- Stylesheet -->
