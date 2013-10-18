@@ -2,7 +2,7 @@
 A lightweight boilerplate that includes just the essentials for building a WordPress theme.
 * Common template files with HTML5 semantic markup.
 * An (almost) empty stylesheet with just a few WordPress-specific classes.
-* A small set of custom functions to make development easier.
+* A small set of custom functions that make development easier.
 * HTML5 Shim, friendly "old browser" messaging, and an IE-conditional class.
 * Fully internationalized and translation-ready.
 
