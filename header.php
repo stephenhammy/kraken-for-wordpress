@@ -50,6 +50,11 @@
 
 	<body>
 
+		<!-- Old Browser Warning -->
+		<!--[if lt IE 9]>
+			<p>Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, safer, and better web experience.</p>
+		<![endif]-->
+
 		<?php get_template_part( 'nav-main', 'Site Navigation' ); ?>
 
 		<section>
