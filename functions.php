@@ -28,7 +28,7 @@ function kraken_post_password_form() {
 	global $post;
 	$label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
 	$form =
-		'<form class="text-center" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post"><p>' . __( 'This is a password protected post.', 'kraken' ) . '</p><label class="screen-reader" for="' . $label . '">' . __( 'Password', 'kraken' ) . '</label><input id="' . $label . '" name="post_password" type="password"><input type="submit" class="input-inline btn" name="Submit" value="' . __( 'Submit', 'kraken' ) . '"></form>';
+		'<form class="text-center" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post"><p>' . __( 'This is a password protected post.', 'kraken' ) . '</p><label class="screen-reader" for="' . $label . '">' . __( 'Password', 'kraken' ) . '</label><input id="' . $label . '" name="post_password" type="password"><input type="submit" name="Submit" value="' . __( 'Submit', 'kraken' ) . '"></form>';
 	return $form;
 }
 add_filter( 'the_password_form', 'kraken_post_password_form' );
