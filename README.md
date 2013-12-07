@@ -13,6 +13,10 @@ Kraken for WordPress is designed as an add-on for [Kraken](http://cferdinandi.gi
 Kraken for WordPress includes a moderate amount of inline documentation. Please consult the [WordPress Codex](http://codex.wordpress.org/Main_Page) for more information on specific functions.
 
 ## Changelog
+* v3.2 (December 6, 2013)
+  * Added Sass support.
+  * Removed all styles from `style.css` file.
+  * Moved front-end styles to `css` folder.
 * v3.1 (October 18, 2013)
   * Replaced `echo sprintf()` with `printf()`.
 * v3.0 (October 17, 2013)
