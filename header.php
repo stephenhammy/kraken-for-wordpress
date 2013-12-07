@@ -37,7 +37,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<!-- Stylesheet -->
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/kraken-for-wp.css">
 
 		<!-- HTML5 Shim for IE 6-8 -->
 		<!--[if lt IE 9]>
