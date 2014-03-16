@@ -36,13 +36,13 @@
 		<link rel="alternate" type="application/rss+xml" title="<?php printf( __( '%s RSS Feed', 'kraken' ), get_bloginfo( 'name' ) ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<!-- Stylesheet -->
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/kraken-for-wp.css">
-
 		<!-- HTML5 Shim for IE 6-8 -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/kraken-for-wp.css">
 
 		<?php wp_head(); ?>
 
@@ -52,8 +52,13 @@
 
 		<!-- Old Browser Warning -->
 		<!--[if lt IE 9]>
-			<p>Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, safer, and better web experience.</p>
+			<section>
+				<p>Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, safer, and better web experience.</p>
+			</section>
 		<![endif]-->
+
+		<!-- Skip link for better accessibility -->
+		<a class="screen-reader" href="#main">Skip to main content</a>
 
 		<?php get_template_part( 'nav-main', 'Site Navigation' ); ?>
 

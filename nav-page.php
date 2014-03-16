@@ -7,6 +7,8 @@
 
 ?>
 
-<nav>
-	<p><?php posts_nav_link( ' / ', __( '&larr; Newer', 'kraken' ), __( 'Older &rarr;', 'kraken' ) ); ?></p>
-</nav>
+<?php if ( is_paginated() ) : ?>
+	<nav>
+		<p><?php posts_nav_link( ' / ', '&larr; ' . __( 'Newer', 'kraken' ), __( 'Older', 'kraken' ) . ' &rarr;' ); ?></p>
+	</nav>
+<?php endif; ?>

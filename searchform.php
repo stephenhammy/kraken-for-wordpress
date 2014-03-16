@@ -10,6 +10,6 @@
 
 <form method="get" id="searchform" action="<?php echo esc_url( home_url('/') ); ?>" >
 	<label class="screen-reader" for="s"><?php _e( 'Search this site:', 'kraken' ) ?></label>
-	<input type="text" class="input-search" id="s" name="s" placeholder="<?php _e( 'Search this site...', 'kraken' ) ?>" value="<?php get_search_query(); ?>">
-	<button type="submit" class="btn-search" id="searchsubmit"><?php _e( 'Search', 'kraken' ) ?></button>
+	<input type="text" id="s" name="s" placeholder="<?php _e( 'Search this site...', 'kraken' ) ?>" value="<?php get_search_query(); ?>">
+	<button type="submit" id="searchsubmit"><?php _e( 'Search', 'kraken' ) ?></button>
 </form>

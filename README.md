@@ -84,7 +84,12 @@ Kraken for WordPress is licensed under the [MIT License](http://gomakethings.com
 
 ## Changelog
 
-* v3.2 - (December 6, 2013
+* v3.3 - March 15, 2014
+	* Added `is_paginated()` and `is_last_post()` to `functions.php`.
+	* Added `content.php` file to make content pages more DRY.
+	* Added skiplink to `header.php`.
+	* Fixed rendering issues with `search.php`.
+* v3.2 - December 6, 2013
 	* Added Sass support.
 	* Removed all styles from `style.css` file.
 	* Moved front-end styles to `css` folder.
