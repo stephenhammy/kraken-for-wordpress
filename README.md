@@ -24,9 +24,7 @@ Kraken for WordPress is a lightweight boilerplate that includes just the essenti
 ### 1. Include Kraken for WordPress on your site.
 
 ```html
-<link rel="stylesheet" href="css/NAMESPACE-LOW-css.css">
-<script src="js/NAMESPACE-LOW.js"></script>
-<script src="buoy.js"></script>
+<link rel="stylesheet" href="css/kraken-for-wp.css">
 ```
 
 Kraken for WordPress is [built with Sass](http://sass-lang.com/) for easy customization. If you don't use Sass, that's ok. The `css` folder contains compiled vanilla CSS.
