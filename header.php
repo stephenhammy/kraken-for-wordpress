@@ -62,4 +62,4 @@
 
 		<?php get_template_part( 'nav-main', 'Site Navigation' ); ?>
 
-		<section>
+		<section id="main">
