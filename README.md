@@ -14,8 +14,9 @@ Kraken for WordPress is a lightweight boilerplate that includes just the essenti
 1. [Getting Started](#getting-started)
 2. [Useful Functions](#useful-functions)
 3. [FAQ](#faq)
-4. [License](#license)
-5. [Changelog](#changelog)
+4. [How to Contribute](#how-to-contribute)
+5. [License](#license)
+6. [Changelog](#changelog)
 
 
 
@@ -73,6 +74,12 @@ Because of this, Kraken for WordPress still uses the traditional `comments.php` 
 ### I'm new to WordPress theming. How do I get started?
 
 The [WordPress Codex](http://codex.wordpress.org/Theme_Development) has a lot of great information. You can also find a ton of great resources on [StackOverflow](http://stackoverflow.com/).
+
+
+
+## How to Contribute
+
+In lieu of a formal style guide, take care to maintain the existing coding style. Don't forget to update the version number, the changelog (in the `readme.md` file), and when applicable, the documentation.
 
 
 
