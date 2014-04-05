@@ -8,6 +8,8 @@ Kraken for WordPress is a lightweight boilerplate that includes just the essenti
 * HTML5 Shim, friendly "old browser" messaging, and an IE-conditional class.
 * Fully internationalized and translation-ready.
 
+[Download Kraken for WordPress 3](https://github.com/cferdinandi/kraken-for-wordpress/archive/master.zip)
+
 
 **In This Documentation**
 
