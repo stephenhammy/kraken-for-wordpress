@@ -4,6 +4,17 @@
 	functions.php
 	For modifying and expanding core WordPress functionality.
  * ====================================================================== */
+// Register Sidebar(s)
+register_sidebar( array(
+	'name'          => __( 'Main Sidebar', 'kraken_sidebar' ),
+	'id'            => 'sidebar-main',
+	'description'   => 'Main Sidebar',
+    'class'         => '',
+	'before_widget' => '',
+	'after_widget'  => '<hr>',
+	'before_title'  => '<h2>',
+	'after_title'   => '</h2>' ) );
+
 
 // Load theme scripts in the footer
 function kraken_load_theme_js() {
